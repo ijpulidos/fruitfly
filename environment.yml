@@ -1,0 +1,13 @@
+name: fruitfly-env
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - rdkit
+  - tqdm
+  - numpy
+  - click
+  - pip
+  - pip:
+    - molbloom==2.2.1
+
