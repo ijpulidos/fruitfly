@@ -26,12 +26,13 @@ To use it you would just activate the created environment with
 same directory where you cloned this repository:
 
 ```bash
-python fruitfly.py find-matches --glob-exp "../*.bloom" --smiles-file matching_examples.sm
-i --out-file results.json
+python fruitfly.py find-matches --glob-exp "filters/*.bloom" --smiles-file input.smi --out-file results.json
 ```
 
 Please note that the quotes in the `glob-exp` are required for the shell to not interpret
 wildcards (`*`).
+
+The `glob-exp` argument is an expression to match the filters files.
 
 Additional arguments can be specified, for more information please use 
 `python fruitfly find-matches --help`.
