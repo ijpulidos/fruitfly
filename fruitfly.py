@@ -158,16 +158,4 @@ def find_matches(glob_exp: str, num_procs: int, smiles_file: str, out_file="resu
 if __name__ == "__main__":
     cli.add_command(find_matches)
     cli()
-    """
-    n_processes = 9
-    file_paths = glob.glob("../*cxsmiles.bz2")
-    # file_paths = ["../Enamine_REAL_HAC_11_21_666M_CXSMILES.cxsmiles.bz2"]
-    n_compounds_from_each = 10000  # Number of mols to extract from each db file
-    with mp.Pool(n_processes) as pool:
-        partial_f = partial(sample_bz2, num_lines=n_compounds_from_each)
-        results = pool.map(partial_f, file_paths, chunksize=1)
 
-    # Pickle/serialize the results
-    with open("results.pickle", "wb") as out_file:
-        pickle.dump(results, out_file, pickle.HIGHEST_PROTOCOL)
-    """
